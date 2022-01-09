@@ -1,0 +1,230 @@
+<!doctype html><html class=no-js lang=ru>
+<head>
+<meta charset=utf-8>
+<meta name=viewport content="width=device-width,initial-scale=1">
+<meta http-equiv=x-ua-compatible content="IE=edge">
+<title>Публикуем сгенерированный HUGO сайт на GitHub Pages - Олег Матвиенко</title>
+<script>(function(a,b){a[b]=a[b].replace("no-js","js")})(document.documentElement,"className")</script>
+<meta name=description content>
+<meta property="og:title" content="Публикуем сгенерированный HUGO сайт на GitHub Pages">
+<meta property="og:description" content="Предварительные условия  У вас есть аккаунт на GitHub У вас еще нет репозитория вида <имя пользователя>.github.io  Чего хотелось достичь В какой-то момент я наконец нашел мотивацию заняться написанием блога. Выбирая между платформами, а-ля WordPress, и статическими генераторами сайтов решил остановить свой выбор на GitHub Pages. Поскольку для GitHub Pages официальным генератором статических страниц служит Jekyll, написанный на Ruby, а мне не хотелось заниматься установкой Ruby себе на машину, решил в качестве инструмента для создания сайта выбрать HUGO.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://mao29.github.io/posts/2021/12/publish-hugo-to-github-pages/"><meta property="article:section" content="posts">
+<meta property="article:published_time" content="2021-01-09T00:00:00+00:00">
+<meta property="article:modified_time" content="2021-01-09T00:00:00+00:00">
+<meta itemprop=name content="Публикуем сгенерированный HUGO сайт на GitHub Pages">
+<meta itemprop=description content="Предварительные условия  У вас есть аккаунт на GitHub У вас еще нет репозитория вида <имя пользователя>.github.io  Чего хотелось достичь В какой-то момент я наконец нашел мотивацию заняться написанием блога. Выбирая между платформами, а-ля WordPress, и статическими генераторами сайтов решил остановить свой выбор на GitHub Pages. Поскольку для GitHub Pages официальным генератором статических страниц служит Jekyll, написанный на Ruby, а мне не хотелось заниматься установкой Ruby себе на машину, решил в качестве инструмента для создания сайта выбрать HUGO."><meta itemprop=datePublished content="2021-01-09T00:00:00+00:00">
+<meta itemprop=dateModified content="2021-01-09T00:00:00+00:00">
+<meta itemprop=wordCount content="665">
+<meta itemprop=keywords content="hugo,github pages,">
+<link rel=preconnect href=https://fonts.gstatic.com crossorigin>
+<link rel=dns-prefetch href=//fonts.googleapis.com>
+<link rel=dns-prefetch href=//fonts.gstatic.com>
+<link rel=stylesheet href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700">
+<link rel=stylesheet href=/css/style.css>
+<link rel="shortcut icon" href=/favicon.ico>
+</head>
+<body class=body>
+<div class="container container--outer">
+<header class=header>
+<div class="container header__container">
+<div class=logo>
+<a class=logo__link href=/ title="Олег Матвиенко" rel=home>
+<div class="logo__item logo__text">
+<div class=logo__title>Олег Матвиенко</div>
+<div class=logo__tagline>Личный блог о работе, профессии, книгах и всякой всячине</div>
+</div>
+</a>
+</div>
+<div class=divider></div>
+</div>
+</header>
+<div class="wrapper flex">
+<div class=primary>
+<main class=main role=main>
+<article class=post>
+<header class=post__header>
+<h1 class=post__title>Публикуем сгенерированный HUGO сайт на GitHub Pages</h1>
+<div class="post__meta meta">
+<div class="meta__item-datetime meta__item">
+<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg><time class=meta__text datetime=2021-01-09T00:00:00Z>09.01.2021</time></div><div class="meta__item-categories meta__item"><svg class="meta__icon icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2 1 2h8v11H0V2z"/></svg><span class=meta__text><a class=meta__link href=/categories/hugo/ rel=category>hugo</a>
+</span>
+</div></div>
+</header>
+<div class="post__toc toc">
+<div class=toc__title>Содержимое страницы</div>
+<div class=toc__menu>
+<nav id=TableOfContents>
+<ul>
+<li><a href=#предварительные-условия>Предварительные условия</a></li>
+<li><a href=#чего-хотелось-достичь>Чего хотелось достичь</a></li>
+<li><a href=#закрытый-репозиторий>Закрытый репозиторий</a></li>
+<li><a href=#создание-сайта>Создание сайта</a></li>
+<li><a href=#загрузка-файлов-сайта-на-github>Загрузка файлов сайта на GitHub</a></li>
+<li><a href=#публикация-сайта-в-github-pages>Публикация сайта в GitHub Pages</a></li>
+<li><a href=#настройка-доступности-сайта>Настройка доступности сайта</a></li>
+</ul>
+</nav>
+</div>
+</div><div class="content post__content clearfix">
+<h2 id=предварительные-условия>Предварительные условия</h2>
+<ul>
+<li>У вас есть аккаунт на <a href=https://github.com/>GitHub</a></li>
+<li>У вас еще нет репозитория вида <code>&lt;имя пользователя>.github.io</code></li>
+</ul>
+<h2 id=чего-хотелось-достичь>Чего хотелось достичь</h2>
+<p>В какой-то момент я наконец нашел мотивацию заняться написанием блога. Выбирая между платформами, а-ля WordPress, и статическими генераторами сайтов решил остановить свой выбор на <a href=https://docs.github.com/en/pages>GitHub Pages</a>. Поскольку для GitHub Pages официальным генератором статических страниц служит <a href=https://docs.github.com/en/pages/setting-up-a-github-pages-site-with-jekyll/about-github-pages-and-jekyll>Jekyll</a>, написанный на Ruby, а мне не хотелось заниматься установкой Ruby себе на машину, решил в качестве инструмента для создания сайта выбрать <a href=https://gohugo.io/>HUGO</a>. Хотелось реализовать схему, когда исходные файлы блога находятся в закрытом репозитории, а публикация производится при помощи GitHub Action-а непосредственно в публичный репозиторий для GitHub Pages.</p>
+<h2 id=закрытый-репозиторий>Закрытый репозиторий</h2>
+<p>Для начала необходимо создать закрытый репозиторий, в котором будут располагаться исходные файлы блога. Сделать это можно следуя <a href=https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-new-repository>официальной инструкции</a>. Лучше создавать пустой репозиторий, не добавляя README-файл, поскольку первым коммитом мы отправим в этот репозиторий свежесозданные файлы HUGO-сайта из локального репозитория и этот README-файл нам не понадобится.</p>
+<h2 id=создание-сайта>Создание сайта</h2>
+<p>Для создания сайта можно следовать официальной инструкции с <a href=https://gohugo.io/getting-started/quick-start/>сайта HUGO</a>.</p>
+<ol>
+<li>Создать пустой git-репозиторий командой <code>git init</code></li>
+<li>Запустить в папке репозитория команду <code>hugo new site</code></li>
+<li>Выбрать и склонировать тему для сайта в папку <code>themes</code></li>
+<li>Добавить контент сайта
+Теперь у нас есть локальный git-репозиторий с исходными файлами сайта. Редактировать файлы можно в любом текстовом редакторе или IDE. Я для этих целей использую Visual Studio Code.</li>
+</ol>
+<h2 id=загрузка-файлов-сайта-на-github>Загрузка файлов сайта на GitHub</h2>
+<p>Чтобы отправить файлы в репозиторий на GitHub, необходимо добавить его в remotes локального гит-репозитория. Для этого выполняем команды</p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>git remote add origin https://github.com/&lt;путь_к_репозиторию&gt;
+git branch -M main
+</code></pre></div><p>После того, как добавили удаленный репозиторий, необходимо сделать начальный коммит. Для этого необходимо сначала добавить все файлы сайта в staging, а затем выполнить команду коммита, добавив комментарий.</p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>git add *
+git commit -m <span style=color:#e6db74>&#34;Начальный коммит&#34;</span>
+</code></pre></div><p>Чтобы не выполнять все команды в терминале, можно воспользоваться инструментами работы с гитом в выбранном вами редакторе. Как правило редакторы и IDE позволяют в WYSIWYG режиме добавлять файлы, осуществлять коммит и отправку изменений в удаленный репозиторий.</p>
+<p>После того, как сделан начальный коммит, можно отправить его в удаленный репозиторий командой <code>git push -u origin main</code>.
+В результате на странице репозитория на GitHub должны появиться исходные файлы сайта. Можно приступать к настройке публикации.</p>
+<h2 id=публикация-сайта-в-github-pages>Публикация сайта в GitHub Pages</h2>
+<p>Сначала необходимо создать репозиторий с именем <code>&lt;user>.github.io</code>. Такое имя репозитория по умолчанию используется для хранения файлов сайта, развернутого с помощью GitHub Pages.</p>
+<p>Для сборки сайта <a href=https://gohugo.io/hosting-and-deployment/hosting-on-github/#build-hugo-with-github-action>официальная документация HUGO</a> предлагает использовать GitHub Action. Если изучить его описание внимательно, он состоит из следующих шагов:</p>
+<ol>
+<li>Получаем файлы из репозитория</li>
+<li>Устанавливаем в образ для сборки HUGO</li>
+<li>Выполняем сборку сайта</li>
+<li>Публикуем результаты сборки в ветку gh-pages данного репозитория
+Такая схема работы подходит и для нашего случая за исключением последнего шага, так как на этом шаге нам необходимо отправить результаты сборки в отдельный репозиторий для GitHub Pages. К счастью, action, используемый на 4 шаге, поддерживает публикацию результатов во внешний репозиторий. Для этого необходимо изменить настройки последнего шага на следующие:</li>
+</ol>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-yml data-lang=yml>- <span style=color:#f92672>name</span>: <span style=color:#ae81ff>Deploy</span>
+  <span style=color:#f92672>uses</span>: <span style=color:#ae81ff>peaceiris/actions-gh-pages@v3</span>
+  <span style=color:#f92672>if</span>: <span style=color:#ae81ff>github.ref == &#39;refs/heads/main&#39;</span>
+  <span style=color:#f92672>with</span>:
+    <span style=color:#f92672>deploy_key</span>: <span style=color:#ae81ff>${{ secrets.DEPLOY_KEY }}</span>
+    <span style=color:#f92672>publish_dir</span>: <span style=color:#ae81ff>./public</span>
+    <span style=color:#f92672>external_repository</span>: <span style=color:#ae81ff>&lt;user&gt;/&lt;user&gt;.github.io</span>
+    <span style=color:#f92672>publish_branch</span>: <span style=color:#ae81ff>main</span>
+</code></pre></div><p>Здесь мы указали в <code>external_repository</code> ссылку на наш репозиторий для GitHub Pages, изменили ветку, в которую отправляются результаты сборки на <code>main</code> (по умолчанию используется <code>gh-pages</code>), а также указали ключ, используемый для отправки файлов во внешний репозиторий <code>deploy_key</code>.</p>
+<p>Каким образом сформировать и настроить ключ публикации описано в <a href=https://github.com/peaceiris/actions-gh-pages#%EF%B8%8F-set-ssh-private-key-deploy_key>инструкции к action-у</a>.
+В результате, после коммита и отправки измененного файла с описанием action-а публикации, этот action должен выполниться и файлы собранного сайта должны появиться в публичном репозитории для GitHub Pages в ветке main. Теперь необходимо настроить доступность сайта по адресу <code>https://&lt;user>.github.io</code>.</p>
+<h2 id=настройка-доступности-сайта>Настройка доступности сайта</h2>
+<p>Необходимо изменить настройку <code>baseURL</code> в <code>config.toml</code> на адрес <code>https://&lt;user>.github.io</code>, закоммитить и отправить данные изменения. После того, как обновленные файлы сайта опубликуются в репозиторий с помощью action-а из предыдущего шага, настраиваем GitHub Pages.</p>
+<ol>
+<li>Переходим на страницу Settings репозитория <code>&lt;user>.github.io</code> во вкладку Pages</li>
+<li>В параметре Source выбираем ветку <code>main</code> и директорию <code>/ (root)</code> в качестве источника файлов для сайта.</li>
+</ol>
+<p>После осуществления данных настроек сайт должен быть доступен по адресу <code>https://&lt;user>.github.io</code>.</p>
+<p>В дальнейшем можно настроить для сайта собственное доменное имя, но это тема уже отдельной статьи.</p>
+</div>
+<footer class=post__footer>
+<div class="post__tags tags clearfix"><svg class="tags__badge icon icon-tag" width="16" height="16" viewBox="0 0 32 32"><path d="M32 19c0 1-1 2-1 2L21 31s-1 1-2 1-2-1-2-1L2 16c-1-1-1.4-2-1.4-2S0 12.5.0 11V3C0 1.5.8.8.8.8S1.5.0 3 0h8c1.5.0 3 .6 3 .6S15 1 16 2l15 15s1 1 1 2zM7 10a3 3 0 100-6 3 3 0 000 6z"/></svg>
+<ul class=tags__list>
+<li class=tags__item>
+<a class="tags__link btn" href=/tags/hugo/ rel=tag>hugo</a>
+</li>
+<li class=tags__item>
+<a class="tags__link btn" href=/tags/github-pages/ rel=tag>github pages</a>
+</li>
+</ul>
+</div>
+</footer>
+</article>
+</main>
+<div class="authorbox clearfix">
+<figure class=authorbox__avatar>
+<img alt="Олег Матвиенко avatar" src=/img/avatar.jpg class=avatar height=90 width=90>
+</figure>
+<div class=authorbox__header>
+<span class=authorbox__name>Об авторе Олег Матвиенко</span>
+</div>
+<div class=authorbox__description>
+Разработчик .NET, технический директор в региональной компании-разработчике ПО
+</div>
+</div>
+</div>
+<aside class=sidebar><div class="widget-search widget">
+<form class=widget-search__form role=search method=get action=https://google.com/search>
+<label>
+<input class=widget-search__field type=search placeholder=ПОИСК… name=q aria-label=ПОИСК…>
+</label>
+<input class=widget-search__submit type=submit value=Search>
+<input type=hidden name=sitesearch value=https://mao29.github.io>
+</form>
+</div>
+<div class="widget-recent widget">
+<h4 class=widget__title>Недавние публикации</h4>
+<div class=widget__content>
+<ul class=widget__list>
+<li class=widget__item><a class=widget__link href=/posts/2021/12/publish-hugo-to-github-pages/>Публикуем сгенерированный HUGO сайт на GitHub Pages</a></li>
+</ul>
+</div>
+</div>
+<div class="widget-categories widget">
+<h4 class=widget__title>Категории</h4>
+<div class=widget__content>
+<ul class=widget__list>
+<li class=widget__item>
+<a class=widget__link href=/categories/hugo/>hugo</a></li>
+</ul>
+</div>
+</div>
+<div class="widget-taglist widget">
+<h4 class=widget__title>Теги</h4>
+<div class=widget__content>
+<a class="widget-taglist__link widget__link btn" href=/tags/github-pages/ title="github pages">github pages</a>
+<a class="widget-taglist__link widget__link btn" href=/tags/hugo/ title=hugo>hugo</a>
+</div>
+</div>
+<div class="widget-social widget">
+<h4 class="widget-social__title widget__title">Социальные сети</h4>
+<div class="widget-social__content widget__content">
+<div class="widget-social__item widget__item">
+<a class="widget-social__link widget__link btn" title=Facebook rel="noopener noreferrer" href=https://facebook.com/oleg.matvienko.5 target=_blank><svg class="widget-social__link-icon icon icon-facebook" width="24" height="24" viewBox="0 0 352 352"><path d="m0 32v288c0 17.5 14.5 32 32 32h288c17.5.0 32-14.5 32-32V32c0-17.5-14.5-32-32-32H32C14.5.0.0 14.5.0 32zm320 0v288h-83V212h41.5l6-48H237v-31c0-14 3.5-23.5 23.5-23.5h26V66c-4.4-.6-19.8-1.5-37.5-1.5-36.9.0-62 22.2-62 63.5v36h-42v48h42v108H32V32z"/></svg>
+<span>Facebook</span>
+</a>
+</div>
+<div class="widget-social__item widget__item">
+<a class="widget-social__link widget__link btn" title=LinkedIn rel="noopener noreferrer" href=https://linkedin.com/in/oleg-matvienko-90ab8a31 target=_blank><svg class="widget-social__link-icon icon icon-linkedin" width="24" height="24" viewBox="0 0 352 352"><path d="M0 40v272c0 21.9 18.1 40 40 40h272c21.9.0 40-18.1 40-40V40c0-21.9-18.1-40-40-40H40C18.1.0.0 18.1.0 40zm312-8c4.6.0 8 3.4 8 8v272c0 4.6-3.4 8-8 8H40c-4.6.0-8-3.4-8-8V40c0-4.6 3.4-8 8-8H312zM59.5 87c0 15.2 12.3 27.5 27.5 27.5s27.5-12.3 27.5-27.5S102.2 59.5 87 59.5 59.5 71.8 59.5 87zM187 157h-1v-21h-45v152h47v-75c0-19.8 3.9-39 28.5-39 24.2.0 24.5 22.4 24.5 40v74h47v-83.5c0-40.9-8.7-72-56.5-72-23 0-38.2 12.6-44.5 24.5zM64 288h47.5V136H64V288z"/></svg>
+<span>LinkedIn</span>
+</a>
+</div>
+<div class="widget-social__item widget__item">
+<a class="widget-social__link widget__link btn" title=Telegram rel="noopener noreferrer" href=https://t.me/oleg_matvienko target=_blank><svg class="widget-social__link-icon icon icon-telegram" width="24" height="24" viewBox="0 0 132 110"><path fill="#ddd" d="M50 103c-4 0-3-1-5-5L34 60l88-52"/><path fill="#aaa" d="M50 103c3 0 4-1 6-3l16-16-20-12"/><path fill="#fff" d="M52 72l48 36c6 3 10 2 11-5l20-93c2-8-3-11-8-9L7 45c-8 4-8 8-1 10l29 9 69-43c3-2 6-1 4 1"/></svg>
+<span>Telegram</span>
+</a>
+</div>
+<div class="widget-social__item widget__item">
+<a class="widget-social__link widget__link btn" title=GitHub rel="noopener noreferrer" href=https://github.com/mao29 target=_blank><svg class="widget-social__link-icon icon icon-github" width="24" height="24" viewBox="0 0 384 374"><path d="m192 0C85.9.0.0 85.8.0 191.7c0 84.7 55 156.6 131.3 181.9 9.6 1.8 13.1-4.2 13.1-9.2.0-4.6-.2-16.6-.3-32.6-53.4 11.6-64.7-25.7-64.7-25.7-8.7-22.1-21.3-28-21.3-28-17.4-11.9 1.3-11.6 1.3-11.6 19.3 1.4 29.4 19.8 29.4 19.8 17.1 29.3 44.9 20.8 55.9 15.9 1.7-12.4 6.7-20.8 12.2-25.6-42.6-4.8-87.5-21.3-87.5-94.8.0-20.9 7.5-38 19.8-51.4-2-4.9-8.6-24.3 1.9-50.7.0.0 16.1-5.2 52.8 19.7 15.3-4.2 31.7-6.4 48.1-6.5 16.3.1 32.7 2.2 48.1 6.5 36.7-24.8 52.8-19.7 52.8-19.7 10.5 26.4 3.9 45.9 1.9 50.7 12.3 13.4 19.7 30.5 19.7 51.4.0 73.7-44.9 89.9-87.7 94.6 6.9 5.9 13 17.6 13 35.5.0 25.6-.2 46.3-.2 52.6.0 5.1 3.5 11.1 13.2 9.2C329 348.2 384 276.4 384 191.7 384 85.8 298 0 192 0z"/></svg>
+<span>GitHub</span>
+</a>
+</div>
+<div class="widget-social__item widget__item">
+<a class="widget-social__link widget__link btn" title=Email href=mailto:o.a.matvienko@gmail.com><svg class="widget-social__link-icon icon icon-mail" width="24" height="24" viewBox="0 0 416 288"><path d="m0 16v256 16h16 384 16v-16V16 0h-16H16 0zm347 16-139 92.5L69 32zM199 157.5l9 5.5 9-5.5L384 46v210H32V46z"/></svg>
+<span>o.a.matvienko@gmail.com</span>
+</a>
+</div>
+</div>
+</div>
+</aside>
+</div>
+<footer class=footer>
+<div class="container footer__container flex">
+<div class=footer__copyright>
+&copy; 2022 Олег Матвиенко.
+<span class=footer__copyright-credits>Сгенерировано с использованием <a href=https://gohugo.io/ rel="nofollow noopener" target=_blank>Hugo</a> и темы <a href=https://github.com/Vimux/Mainroad/ rel="nofollow noopener" target=_blank>Mainroad</a>.</span>
+</div>
+</div>
+</footer>
+</div>
+<script async defer src=/js/menu.js></script>
+</body>
+</html>

@@ -39,13 +39,23 @@
 <div class="wrapper flex">
 <div class=primary>
 <main class="main list" role=main>
-<div class=warning><svg class="warning__icon icon icon-files" width="96" height="96" viewBox="0 0 384 384"><path d="m368 64H144h-16v16 288 16h16 224 16v-16V80 64zm-16 288H160V96h192zM32 32h192v16h32V16 0h-16H16 0v16 288 16h16 96v-32H32zm144 272h160v-32H176zm0-64h160v-32H176zm0-64h160v-32H176zM48 240h64v-32H48zm0-64h64v-32H48zm0-64h64V80H48z"/></svg>
-<h3 class=warning__headline>У вас нет ни одной публикации!</h3>
-<div class=warning__text>
-<p class=warning__description>Как только вы опубликуете что-нибудь в любой папке (разделе) внутри директории <b>content</b>, оно появится здесь. По-умолчанию на главной странице будет отображаться только один раздел (с наибольшим количеством публикаций).</p>
-<p class=warning__tip><b>Совет:</b> Вы можете отображать сколько угодно разделов с помощью параметра конфигурации <b><a href=https://gohugo.io/functions/where/#mainsections rel="nofollow noopener" target=_blank>mainSections</a></b>.</p>
+<article class="list__item post">
+<header class=list__header>
+<h2 class="list__title post__title">
+<a href=/posts/2021/12/publish-hugo-to-github-pages/ rel=bookmark>
+Публикуем сгенерированный HUGO сайт на GitHub Pages
+</a>
+</h2>
+<div class="list__meta meta">
+<div class="meta__item-datetime meta__item">
+<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg><time class=meta__text datetime=2021-01-09T00:00:00Z>09.01.2021</time></div><div class="meta__item-categories meta__item"><svg class="meta__icon icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2 1 2h8v11H0V2z"/></svg><span class=meta__text><a class=meta__link href=/categories/hugo/ rel=category>hugo</a>
+</span>
+</div></div>
+</header>
+<div class="content list__excerpt post__content clearfix">
+Предварительные условия У вас есть аккаунт на GitHub У вас еще нет репозитория вида &lt;имя пользователя>.github.io Чего хотелось достичь В какой-то момент я наконец нашел мотивацию заняться написанием блога. Выбирая между платформами, а-ля WordPress, и статическими генераторами сайтов решил остановить свой выбор на GitHub Pages. Поскольку для GitHub Pages официальным генератором статических страниц служит Jekyll, написанный на Ruby, а мне не хотелось заниматься установкой Ruby себе на машину, решил в качестве инструмента для создания сайта выбрать HUGO.
 </div>
-</div>
+</article>
 </main>
 </div>
 <aside class=sidebar><div class="widget-search widget">
@@ -56,6 +66,30 @@
 <input class=widget-search__submit type=submit value=Search>
 <input type=hidden name=sitesearch value=https://mao29.github.io>
 </form>
+</div>
+<div class="widget-recent widget">
+<h4 class=widget__title>Недавние публикации</h4>
+<div class=widget__content>
+<ul class=widget__list>
+<li class=widget__item><a class=widget__link href=/posts/2021/12/publish-hugo-to-github-pages/>Публикуем сгенерированный HUGO сайт на GitHub Pages</a></li>
+</ul>
+</div>
+</div>
+<div class="widget-categories widget">
+<h4 class=widget__title>Категории</h4>
+<div class=widget__content>
+<ul class=widget__list>
+<li class=widget__item>
+<a class=widget__link href=/categories/hugo/>hugo</a></li>
+</ul>
+</div>
+</div>
+<div class="widget-taglist widget">
+<h4 class=widget__title>Теги</h4>
+<div class=widget__content>
+<a class="widget-taglist__link widget__link btn" href=/tags/github-pages/ title="github pages">github pages</a>
+<a class="widget-taglist__link widget__link btn" href=/tags/hugo/ title=hugo>hugo</a>
+</div>
 </div>
 <div class="widget-social widget">
 <h4 class="widget-social__title widget__title">Социальные сети</h4>
